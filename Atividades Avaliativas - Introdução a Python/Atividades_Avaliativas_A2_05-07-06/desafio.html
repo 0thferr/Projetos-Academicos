@@ -1,0 +1,44 @@
+<html>
+    <head>        
+    </head>
+    <body>
+    <p> Vamos descobrir se você precisa mudar seu estilo de vida </p>
+    <br>
+    <p>Informe teu peso no campo abaixo: </p>
+    <input type="Text" id="txtPrimeiroValor" placeholder="Informe seu peso aqui" size="22">
+    <br>
+    <p>Informe sua altura abaixo: </p>
+    <input type="Text" id="txtSegundoValor" placeholder="Digite sua altura aqui" size="23">
+    <br> 
+    <br>	
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <input type="button" value="Limpar" onclick="Limpar()">
+    <br>  
+    <p>Resultado:</p>
+    <input type="Text" id="txtResultadoValor" placeholder="Respota aqui" size="23">
+    <script type="text/javascript">
+        function Calcular(){
+            let peso = parseFloat(document.getElementById("txtPrimeiroValor").value)
+            let altura = parseFloat(document.getElementById("txtSegundoValor").value)
+            var resultado = peso / (altura*altura)
+            if(resultado < 18.5){
+                document.getElementById("txtResultadoValor").value = 'Abaixo do peso'
+            }
+            else if (resultado <= 25){
+                document.getElementById("txtResultadoValor").value = 'Peso Normal'
+            }
+            else if (resultado <= 30){
+                document.getElementById("txtResultadoValor").value = 'Acima do peso'
+            }
+            else{
+                document.getElementById("txtResultadoValor").value = 'Obeso'
+            }
+        }
+        function Limpar(){
+            document.getElementById("txtPrimeiroValor").value = null
+            document.getElementById("txtSegundoValor").value = null
+            document.getElementById("txtResultadoValor").value = null
+        }
+    </script>
+    </body>
+</html>
