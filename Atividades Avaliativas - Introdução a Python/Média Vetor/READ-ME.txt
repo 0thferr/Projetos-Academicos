@@ -1,3 +1,0 @@
-Escreva um programa em C para encontrar a média de um vetor de 15 números reais
-(float) e, em seguida, seu programa deve mostrar na tela os números maiores que a
-média calculados. mostra a complexidade de seu programa usando notação O.
